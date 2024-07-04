@@ -1,4 +1,4 @@
-![CGE Logo](https://chamados.controladoria.go.gov.br/pics/logos/logo-GLPI-250-black.png)
+![CGE Logo](https://chamados.controladoria.go.gov.br/pics/logos/CGE_Abreviada_positivo.png)
 
 # GLPI da Controladoria-Geral do Estado de Goiás
 
