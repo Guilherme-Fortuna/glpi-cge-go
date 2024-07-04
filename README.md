@@ -19,15 +19,15 @@ Esta aplicação foi divulgada para todos os servidores a partir do dia 01/05/20
 ## Cronjobs executadas em nosso projeto:
 
 * **Roda as cronjobs configuradas na interface a cada minuto:**
-    * * * * * /usr/local/bin/glpi-cron.sh
+#    * * * * * /usr/local/bin/glpi-cron.sh
 * **Todo dia às 7h cria usuários do AD:**
-    0 7 * * * /usr/local/bin/glpi-syncusers.sh c
+#    0 7 * * * /usr/local/bin/glpi-syncusers.sh c
 * **Todo dia às 7h atualiza usuários do AD:**
-    0 7 * * * /usr/local/bin/glpi-syncusers.sh u
+#    0 7 * * * /usr/local/bin/glpi-syncusers.sh u
 * **Todo dia às 7h compila os arquivos de tradução:**
-    0 7 * * * /usr/local/bin/glpi-locales.sh
+#    0 7 * * * /usr/local/bin/glpi-locales.sh
 * **Todo dia às 7h02m limpa o cache:**
-    2 7 * * * /usr/local/bin/glpi-clearcache.sh
+#    2 7 * * * /usr/local/bin/glpi-clearcache.sh
 
 ## Algumas prints
 
