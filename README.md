@@ -1,10 +1,10 @@
 ![CGE Logo](https://chamados.controladoria.go.gov.br/pics/logos/logo-GLPI-250-black.png)
 
-## GLPI da Controladoria-Geral do Estado de Goiás
+# GLPI da Controladoria-Geral do Estado de Goiás
 
 Esta aplicação foi divulgada para todos os servidores a partir do dia 01/05/2024, havendo alta adesão do público-alvo (servidores desta controladoria).
 
-## Novos recursos perante ao sistema antigo:
+# Novos recursos perante ao sistema antigo:
 
 * **Continuidade dos Chamados**: Com o GLPI é possível enviar mais de 1 mensagem/resposta dentro de um único chamado, anexar itens após a abertura e também possibilita a reabertura de chamados.
 
@@ -16,20 +16,20 @@ Esta aplicação foi divulgada para todos os servidores a partir do dia 01/05/20
 
 * **Reservas de Carros e Salas de Reunião**: A reserva dos itens citados anteriormente, eram feitas manualmente em ordens de tráfego impressas em papel A4. Atualmente todos os servidores podem efetuar/acompanhar as reservas e o setor responsável pelas reservas, pode gerenciar todas reservas efetuadas.
 
-## Cronjobs executadas em nosso projeto:
+# Cronjobs executadas em nosso projeto:
 
+##    * * * * * /usr/local/bin/glpi-cron.sh
 * **Roda as cronjobs configuradas na interface a cada minuto:**
-    * * * * * /usr/local/bin/glpi-cron.sh
+##    0 7 * * * /usr/local/bin/glpi-syncusers.sh c
 * **Todo dia às 7h cria usuários do AD:**
-    0 7 * * * /usr/local/bin/glpi-syncusers.sh c
+##    0 7 * * * /usr/local/bin/glpi-syncusers.sh u
 * **Todo dia às 7h atualiza usuários do AD:**
-    0 7 * * * /usr/local/bin/glpi-syncusers.sh u
+##    0 7 * * * /usr/local/bin/glpi-locales.sh
 * **Todo dia às 7h compila os arquivos de tradução:**
-    0 7 * * * /usr/local/bin/glpi-locales.sh
+##    2 7 * * * /usr/local/bin/glpi-clearcache.sh
 * **Todo dia às 7h02m limpa o cache:**
-    2 7 * * * /usr/local/bin/glpi-clearcache.sh
 
-## Algumas prints
+# Algumas prints
 
 **Login**
 
