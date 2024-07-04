@@ -31066,9 +31066,9 @@ body.iframed, body.in_modal {
   overflow-x: hidden;
 }
 .page .glpi-logo {
-  background: url("../pics/logos/logo-GLPI-100-white.png") no-repeat;
+  background: url("../pics/logos/logo-cge-100-white.png") no-repeat;
   height: 55px;
-  width: 100px;
+  width: 225px;
 }
 .page .page-body {
   margin-bottom: 0;
@@ -31153,6 +31153,9 @@ body.iframed, body.in_modal {
   background-image: linear-gradient(#00760c, #00a45a, #00b49e, #00c8b6);
 }
 .copyright {
+  color: #ffffff;
+}
+.menu-label {
   color: #ffffff;
 }
 table tbody:not(:has(tr)) {
@@ -32767,6 +32770,7 @@ body .flatpickr-time input:hover, body .flatpickr-time .flatpickr-am-pm:hover, b
 }
 .sidebar, .topbar {
   background-color: #459436;
+  background-image: linear-gradient(#00760c, #00a45a, #00b49e, #00c8b6);
   color: #f4f6fa;
   z-index: 1031;
 }

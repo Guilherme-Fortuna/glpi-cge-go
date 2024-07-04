@@ -318,48 +318,52 @@ class ReservationItem extends CommonDBChild
 
         echo "<div>";
         echo "<table class='tab_cadre_fixe'>";
-        echo "<tr><th colspan='2'>" . __('Reserve an item') . "</th></tr>";
-        echo "<tr class='tab_bg_1'>";
+        // echo "<tr><th colspan='2'>" . __('Reserve an item') . "</th></tr>";
+        // echo "<tr class='tab_bg_1'>";
         if ($ri->getFromDBbyItem($item->getType(), $item->getID())) {
-            echo "<td class='center'>";
+            // echo "<td class='center'>";
            //Switch reservation state
 
-            if ($ri->fields["is_active"]) {
-                Html::showSimpleForm(
-                    static::getFormURL(),
-                    'update',
-                    "<i class='fas fa-toggle-on'></i>&nbsp;" . __('Make unavailable'),
-                    [
-                        'id'        => $ri->fields['id'],
-                        'is_active' => 0
-                    ]
-                );
-            } else {
-                Html::showSimpleForm(
-                    static::getFormURL(),
-                    'update',
-                    "<i class='fas fa-toggle-off'></i>&nbsp;" . __('Make available'),
-                    [
-                        'id'        => $ri->fields['id'],
-                        'is_active' => 1
-                    ]
-                );
-            }
+            // Descomentar para habilitar o botão de Desativar/Ativar reservas para este item.
+            // if ($ri->fields["is_active"]) {
+            //     Html::showSimpleForm(
+            //         static::getFormURL(),
+            //         'update',
+            //         "<i class='fas fa-toggle-on'></i>&nbsp;" . __('Make unavailable'),
+            //         [
+            //             'id'        => $ri->fields['id'],
+            //             'is_active' => 0
+            //         ]
+            //     );
+            // } else {
+            //     Html::showSimpleForm(
+            //         static::getFormURL(),
+            //         'update',
+            //         "<i class='fas fa-toggle-off'></i>&nbsp;" . __('Make available'),
+            //         [
+            //             'id'        => $ri->fields['id'],
+            //             'is_active' => 1
+            //         ]
+            //     );
+            // }
+            // Até aqui ^
+            
+            // Descomentar para habilitar o botão de "Proibir Reservas"
+            // echo '</td><td>';
+            // Html::showSimpleForm(
+            //     static::getFormURL(),
+            //     'purge',
+            //     "<i class='fas fa-ban'></i>&nbsp;" . __('Prohibit reservations'),
+            //     ['id' => $ri->fields['id']],
+            //     '',
+            //     '',
+            //     [__('Are you sure you want to return this non-reservable item?'),
+            //         __('That will remove all the reservations in progress.')
+            //     ]
+            // );
+            // echo "</td>";
+            // Até aqui ^
 
-            echo '</td><td>';
-            Html::showSimpleForm(
-                static::getFormURL(),
-                'purge',
-                "<i class='fas fa-ban'></i>&nbsp;" . __('Prohibit reservations'),
-                ['id' => $ri->fields['id']],
-                '',
-                '',
-                [__('Are you sure you want to return this non-reservable item?'),
-                    __('That will remove all the reservations in progress.')
-                ]
-            );
-
-            echo "</td>";
         } else {
             echo "<td class='center'>";
             Html::showSimpleForm(

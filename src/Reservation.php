@@ -657,7 +657,7 @@ JAVASCRIPT;
 
             if ($can_read || $my_item) {
                 $user->getFromDB($data['users_id']);
-                $data['comment'] .= '<br />' . sprintf(__("Reserved by %s"), $user->getFriendlyName());
+                $data['comment'] .= '<br /><br />' .'<b>Encerramento/Retorno: '. $data['end'] .=  '<br /><br />' . sprintf(__("Reserved by %s"), $user->getFriendlyName());
             }
 
             $name = $item->getName([

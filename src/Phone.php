@@ -75,7 +75,7 @@ class Phone extends CommonDBTM
     public static function getTypeName($nb = 0)
     {
        //TRANS: Test of comment for translation (mark : //TRANS)
-        return _n('Phone', 'Phones', $nb);
+        return _n('Carro', 'Carros', $nb);
     }
 
 
@@ -506,6 +506,6 @@ class Phone extends CommonDBTM
 
     public static function getIcon()
     {
-        return "ti ti-phone";
+        return "ti ti-car";
     }
 }
