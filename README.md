@@ -20,6 +20,7 @@ Esta aplicação foi divulgada para todos os servidores a partir do dia 01/05/20
 
 ##    * * * * * /usr/local/bin/glpi-cron.sh
 * **Roda as cronjobs configuradas na interface a cada minuto:**
+
 ##    0 7 * * * /usr/local/bin/glpi-syncusers.sh c
 * **Todo dia às 7h cria usuários do AD:**
 ##    0 7 * * * /usr/local/bin/glpi-syncusers.sh u
