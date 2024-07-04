@@ -145,12 +145,13 @@ if (!file_exists(GLPI_CONFIG_DIR . "/config_db.php")) {
         'namfield'            => ($_SESSION['namfield'] = uniqid('fielda')),
         'pwdfield'            => ($_SESSION['pwdfield'] = uniqid('fieldb')),
         'rmbfield'            => ($_SESSION['rmbfield'] = uniqid('fieldc')),
-        'show_lost_password'  => $CFG_GLPI["notifications_mailing"]
-                              && countElementsInTable('glpi_notifications', [
-                                  'itemtype'  => 'User',
-                                  'event'     => 'passwordforget',
-                                  'is_active' => 1
-                              ]),
+        // Descomentar para habilitar o botão de "Esqueceu a senha?"
+        // 'show_lost_password'  => $CFG_GLPI["notifications_mailing"]
+        //                       && countElementsInTable('glpi_notifications', [
+        //                           'itemtype'  => 'User',
+        //                           'event'     => 'passwordforget',
+        //                           'is_active' => 1
+        //                       ]),
         'languages_dropdown'  => Dropdown::showLanguages('language', [
             'display'             => false,
             'rand'                => $rand,
