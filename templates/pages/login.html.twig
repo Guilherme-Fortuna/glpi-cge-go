@@ -39,14 +39,19 @@
       <input type="hidden" name="redirect" value="{{ redirect }}" />
       <input type="hidden" name="_glpi_csrf_token" value="{{ csrf_token() }}" />
 
-      <div class="row justify-content-center">
-         <div class="col-md-5">
+      <div class="col justify-content-center">
+         <div class="col-md-6 mx-auto">
             <div class="card-header mb-4">
                <h2 class="mx-auto">{{ __('Login to your account') }}</h2>
             </div>
+            {% if text_login|length > 0 %}
+                  <div class="rich_text_container">
+                     {{ text_login|safe_html }}
+                  </div>
+            {% endif %}
             <div class="mb-3">
                <label class="form-label" for="login_name">{{ __('Login') }}</label>
-               <input type="text" class="form-control" id="login_name" name="{{ namfield }}" placeholder="" tabindex="1" />
+               <input type="text" class="form-control" id="login_name" name="{{ namfield }}" placeholder="Usuário de rede" tabindex="1" />
             </div>
             <div class="mb-4">
                <label class="form-label" for="login_password">
@@ -60,7 +65,7 @@
                      </span>
                   {% endif %}
                </label>
-               <input type="password" class="form-control" id="login_password" name="{{ pwdfield }}" placeholder="" autocomplete="off" tabindex="2" />
+               <input type="password" class="form-control" id="login_password" name="{{ pwdfield }}" placeholder="Senha de rede" autocomplete="off" tabindex="2" />
             </div>
 
             {% if constant('GLPI_DEMO_MODE') %}
@@ -102,11 +107,6 @@
 
          {% if right_panel %}
             <div class="col-auto px-2 text-center">
-               {% if text_login|length > 0 %}
-                  <div class="rich_text_container">
-                     {{ text_login|safe_html }}
-                  </div>
-               {% endif %}
 
                {% if config('use_public_faq') %}
                   <hr />
