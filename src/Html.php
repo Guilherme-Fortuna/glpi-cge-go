@@ -1605,9 +1605,17 @@ HTML;
         }
 
         if (Session::haveRightsOr("reservation", [READ, ReservationItem::RESERVEANITEM])) {
+            $menu['calendarioDeReservas'] = [
+                'default' => '/front/reservation.php?reservationitems_id=0',
+                'title'   => _n('Calendario de Reservas', 'Calendario de Reservas', Session::getPluralNumber()),
+                'icon'    => ReservationItem::getIcon(),
+            ];
+        }
+
+        if (Session::haveRightsOr("reservation", [READ, ReservationItem::RESERVEANITEM])) {
             $menu['reservation'] = [
                 'default' => '/front/reservationitem.php',
-                'title'   => _n('Reservation', 'Reservations', Session::getPluralNumber()),
+                'title'   => _n('Lista de Reservas', 'Lista de Reservas', Session::getPluralNumber()),
                 'icon'    => ReservationItem::getIcon(),
             ];
         }

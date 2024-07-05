@@ -75,7 +75,7 @@ class Peripheral extends CommonDBTM
      **/
     public static function getTypeName($nb = 0)
     {
-        return _n('Device', 'Devices', $nb);
+        return _n('Sala', 'Salas', $nb);
     }
 
 
@@ -412,6 +412,6 @@ class Peripheral extends CommonDBTM
 
     public static function getIcon()
     {
-        return "fab fa-usb";
+        return "ti ti-clipboard";
     }
 }
